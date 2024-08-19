@@ -12,12 +12,12 @@ const WeatherBox = ({weather}) => {
     }
   return (  
     <div className='weather-box'>
-        <div>{weather?.name}</div>
-        <h2>{weather?.main.temp}°C / {Flo}°F</h2>
-        <h3>{weather?.weather[0].description}</h3>
+        <div>{weather&&weather?.name}</div>
+        <h2>{weather&&weather?.main.temp}°C / {weather&&Flo}°F</h2>
+        <h3>{weather&&weather?.weather[0].description}</h3>
         <div>
         <img src='https://cdn-icons-png.flaticon.com/512/12469/12469135.png' alt='' className='windD' style={windDeg}/>
-        속도: {weather?.wind.speed}</div>
+        속도: {weather&&weather?.wind.speed}</div>
     </div>
   )
 }
